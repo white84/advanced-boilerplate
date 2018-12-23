@@ -1,10 +1,11 @@
 # Учебный шаблон проекта Portfolio
 
-> Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/)
+Продвинутый курс по веб-разработке Loftschool, 12/2018 
+Студент: Лашн Александр
 
 ##  Чтобы развернуть проект необходимо:
 ```sh
-$ git clone git@github.com:loftschool/advanced-boilerplate.git
+$ git clone https://github.com/white84/advanced-boilerplate.git
 $ cd advanced-boilerplate
 $ npm install
 ```

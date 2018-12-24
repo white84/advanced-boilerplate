@@ -1,0 +1,9 @@
+header.header
+  .header__socials
+    ul.socials
+        each social in ['vk', 'github', 'in']
+            li.socials__item
+                //+icon(social, 'socials__icon')
+                .svg-bt(class=`inlined-svg-${social}`)
+  .header__menu
+    .inlined-svg-hamburger

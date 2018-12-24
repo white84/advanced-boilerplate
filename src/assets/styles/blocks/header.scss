@@ -1,0 +1,82 @@
+.header__socials
+{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+
+.header__menu
+{
+    position: absolute;
+    top: 30px;
+    right: 30;
+}
+
+.social
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.socials__item
+{
+    display: inline-block;
+
+    .svg-bt
+    {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        margin-right: 30px;
+    }
+}
+
+.inlined-svg-github {
+    background: svg-load('github.svg', fill=$green) center center no-repeat;
+    
+    &:hover {
+      background-image: svg-load('github.svg', fill=red);
+    }
+  }
+
+  .inlined-svg-vk {
+    background: svg-load('vk.svg', fill=$green) center center no-repeat;
+    
+    &:hover {
+      background-image: svg-load('vk.svg', fill=red);
+    }
+  }
+
+  .inlined-svg-in {
+    
+    background: svg-load('in.svg', fill=$green) center center no-repeat;
+
+    
+    &:hover {
+      background-image: svg-load('in.svg', fill=red);
+    }
+  }
+
+  .inlined-svg-hamburger {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: svg-load('hamburger.svg', fill=$green) center center no-repeat;
+
+    &:hover {
+      background-image: svg-load('hamburger.svg', fill=red);
+    }
+  }
+
+  .inlined-svg-hamburger {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: svg-load('hamburger.svg', fill=$green) center center no-repeat;
+
+    &:hover {
+      background-image: svg-load('hamburger.svg', fill=red);
+    }
+  }

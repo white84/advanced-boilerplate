@@ -9,5 +9,118 @@ block scripts
 block content
   section.hero
     include ../common/header.pug
-    .hero__content Привет
-    .hero_arrow-down  
+    .hero__content
+      +image('titles/portfolio-header.png', 'page title', 'title-img')
+      .hero__user-desc
+        .user
+          .user__pic-container
+            .user_pic
+              +image('content/user.jpg', 'user pic', 'user_pic-img')
+          .user__info 
+            .user__name Лашин Александр
+            .user__desc Личный сайт разработчика
+      .hero__arrow-down.inlined-svg-arrow-down 
+
+
+  section.about
+    .about__col.about__col--background-white
+      .about__triangle
+        svg(viewbox="0 0 1000 150").triangle--svg-left-triagle
+          polygon(points=("0 0, 1000 150, 0 150"))
+      .about__left-title
+        h1.title Обо мне
+      .about__user-info
+        .user-info
+          .user-info__avatar
+            +image('content/user-pic.jpg', 'user avatar', 'user-info__avatar_pic')
+          .user-info__title
+            h2.subtitle Кто я
+          .user-info__text.text-block
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eos ex aliquam, mollitia in facilis. Ea deserunt dignissimos voluptates laboriosam, culpa eum doloremque, molestias necessitatibus fugiat sed harum omnis deleniti. 
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eos ex aliquam, mollitia in facilis. Ea deserunt dignissimos voluptates laboriosam, culpa eum doloremque, molestias necessitatibus fugiat sed harum omnis deleniti. 
+    .about__col.about__col--background-beige
+      .about__triangle
+        svg(viewbox="0 0 1000 150").triangle--svg-right-triagle
+          polygon(points=("0 150, 1000 0, 1000 150"))
+      .about__right-title
+        h2.subtitle Чем я могу быть вам полезен
+      .about__desc-text.text-block
+          p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio culpa quas possimus veritatis cupiditate impedit doloribus quo, consequuntur alias, porro sequi optio nemo. Quia fugit quisquam voluptatibus animi libero vero?
+      .about__content
+        ul.skills
+          - 
+            var skillGroups = [
+              { 
+                groupName : "Frontend",
+                skills: [
+                  {
+                     name: "HTML",
+                     percent: "45"
+                  }, 
+                  { 
+                    name: "CSS",
+                    percent: "30"
+                  },
+                  {
+                    name: "JavaScript & JQuery",
+                    percent: "80"
+                  }
+                ]
+              },
+              { 
+                groupName : "Backend",
+                skills: [
+                  {
+                     name: "PHP",
+                     percent: "45"
+                  }, 
+                  { 
+                    name: "mySql",
+                    percent: "30"
+                  },
+                  {
+                    name: "Node.js & npm",
+                    percent: "80"
+                  },
+                  {
+                    name: "Mongo.db",
+                    percent: "80"
+                  }
+                ]
+              },
+              { 
+                groupName : "WorkFlow" , 
+                skills: [
+                  {
+                     name: "Git",
+                     percent: "45"
+                  }, 
+                  { 
+                    name: "Gulp",
+                    percent: "30"
+                  },
+                  {
+                    name: "Bower",
+                    percent: "80"
+                  }
+                ]
+              }
+            ];
+          each skillGroup in skillGroups 
+            li.skills__item
+              .skills-row
+                .skills-row__title #{skillGroup.groupName}
+                ul.skills-row__list
+                  each skill in skillGroup.skills
+                    li.skill-row__item
+                      .skill
+                        .skill__progress-bar(title=skill.name)
+                          - var pct =  ((100-skill.percent)/100) * Math.PI*(50*2)
+                          - console.log(pct)
+                          svg(viewPort="0 0 100 100").skill__progress
+                            circle(r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0").skill__circle
+                            circle(r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0" style="stroke-dashoffset: " + pct + "px;" ).skill__circle.skill__circle--bar
+                        
+
+
+                  

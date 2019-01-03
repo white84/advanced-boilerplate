@@ -19,10 +19,12 @@ block content
           .user__info 
             .user__name Лашин Александр
             .user__desc Личный сайт разработчика
-      .hero__arrow-down.inlined-svg-arrow-down 
+      a.href(href="#about")
+        .hero__arrow-down.inlined-svg-arrow-down 
 
 
   section.about
+    a(name="about")
     .about__col.about__col--background-white
       .about__triangle
         svg(viewbox="0 0 1000 150").triangle--svg-left-triagle
@@ -120,12 +122,80 @@ block content
                           svg(viewPort="0 0 100 100").skill__progress
                             circle(r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0").skill__circle
                             circle(r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0" style="stroke-dashoffset: " + pct + "px;" ).skill__circle.skill__circle--bar
+
+
   section.contacts         
     .contacts__map
-    .user-contacts
-      .user-contacts__title
-        h1.title Контакты
-      .user-contacts__row
+    .contacts__pop-up
+      .user-contacts
+        .user-contacts__title
+          h2.title Контакты
+          -
+            var contacts =
+              [
+                { 
+                  svg: 'skype',
+                  href: 'skype:echo123?call',
+                  text : "white white"
+                },
+                {
+                  svg : 'envelope',
+                  href : 'mailto:lashin.sasha@gmail.com',
+                  text: 'lashin.sasha@gmail.com'
+                },
+                {
+                  svg : 'phone',
+                  href : 'tel:+79851619766',
+                  text : '+79851619766'
+                },
+                {
+                  svg : 'map_marker',
+                  href : 'https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%9A%D0%B8%D1%80%D0%BE%D0%B2%D0%B0,+4,+%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA,+%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB./@55.430827,37.5399663,17z/data=!3m1!4b1!4m5!3m4!1s0x414aa83872d05f41:0xed3b379c332d60b1!8m2!3d55.430827!4d37.542155',
+                  text : 'г. Подольск ул. Кирова 4'
+                }
+              ];
+        each contact in contacts
+          a.contact(href=contact.href target="_blank")
+            .contact__icon(class=`inlined-svg-${contact.svg}`)
+            .contact__text #{contact.text}
+  
+  
+  footer.footer
+    .footer__row
+      .footer__col
+        ul.menu
+          -
+            var menuItems = [
+              {
+                href:'portfolio.html',
+                name:'Мои работы'
+              },
+              {
+                href:'about.html',
+                name:'Обо мне'
+              },
+              {
+                href:'blog.html',
+                name:'Блог'
+              },
+              {
+                href:'index.html',
+                name:'Авторизация'
+              },
+            ];
+          each menuItem in menuItems
+            il.menu__item
+              a.menu_link(href=menuItem.href) #{menuItem.name}
+      .footer__col.footer__col--justify-end
+        ul.socials
+        each social in [['vk', 'https://vk.com/id436024674'], ['github', 'https://github.com/white84'], ['in', 'https://ru.linkedin.com/']]
+            li.socials__item.socials__item--round
+              a(href=`${social[1]}` target="_blank").social__link
+                //+icon(social, 'socials__icon')
+                .socials__icon(class=`inlined-svg-${social[0]}`)
+    .footer__row
+      .footer__col  Я веб-разработчик из Подольска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+      .footer__col.footer__col--justify-end © Лашин Александр | создано с любовью в LoftSchool | 2019
 
         
         

@@ -3,15 +3,83 @@
     display: flex;
     flex-direction: row;
     min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
 
     .contacts__map
     {
         display: flex;
         background: url('/assets/images/bg/map.jpg') center center / cover no-repeat;
         width: 100%;
+        min-height: inherit;
+
         justify-content: center;
         align-items: center;
     }
+    .contacts__pop-up
+    {
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 380px;
+        height: 290px;
+        border-radius: 5px;
+        background-color: rgb(252, 252, 252);
+        opacity: 0.851;
+        padding: 35px;
+    }
+}
+
+.user-contacts
+{
+    .user-contacts__title
+    {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.contact
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color:  rgba(69, 90, 100, 0.8);
+    text-decoration: none;
+    .contact__icon
+    {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        display: inline-block;
+    }
+    .contact__text
+    {
+        display: inline-block; 
+    }
+
+    .inlined-svg-skype {
+        background: svg-load('skype.svg', fill=$green, fill-opacity="1") center center no-repeat;
+    }
+    .inlined-svg-envelope {
+        background: svg-load('envelope.svg', fill=$green, fill-opacity="1") center center no-repeat;
+    }
+    .inlined-svg-phone {
+        background: svg-load('phone.svg', fill=$green, fill-opacity="1") center center no-repeat;
+    }
+    .inlined-svg-map_marker {
+        background: svg-load('map_marker.svg', fill=$green, fill-opacity="1") center center no-repeat;
+    }
+}
+
+.footer
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 

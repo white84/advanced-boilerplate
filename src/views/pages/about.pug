@@ -116,11 +116,20 @@ block content
                       .skill
                         .skill__progress-bar(title=skill.name)
                           - var pct =  ((100-skill.percent)/100) * Math.PI*(50*2)
-                          - console.log(pct)
+                          //- console.log(pct)
                           svg(viewPort="0 0 100 100").skill__progress
                             circle(r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0").skill__circle
                             circle(r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0" style="stroke-dashoffset: " + pct + "px;" ).skill__circle.skill__circle--bar
-                        
+  section.contacts         
+    .contacts__map
+    .user-contacts
+      .user-contacts__title
+        h1.title Контакты
+      .user-contacts__row
+
+        
+        
+         
 
 
                   

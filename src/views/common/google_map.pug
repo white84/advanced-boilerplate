@@ -1,0 +1,9 @@
+.map(id="map") 
+    script
+      |function initMap() {
+      |  var uluru = {lat: 55.39, lng: 37.53};
+      |  var map = new google.maps.Map(
+      |      document.getElementById('map'), {zoom: 12, center: uluru});
+      |  var marker = new google.maps.Marker({position: uluru, map: map});
+      |}
+    script(src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap")

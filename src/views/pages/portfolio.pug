@@ -1,0 +1,90 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+
+block content
+  section.hero
+    include ../common/header.pug
+    .hero__content
+      +image('titles/portfolio-header.png', 'page title', 'title-img')
+      .hero__user-desc
+        .user
+          .user__pic-container
+            .user_pic
+              +image('content/user.jpg', 'user pic', 'user_pic-img')
+          .user__info 
+            .user__name Лашин Александр
+            .user__desc Личный сайт разработчика
+      a.href(href="#works")
+        .hero__arrow-down.inlined-svg-arrow-down 
+  section.works
+    a(name="works")
+    .works__triangle
+        .works__col
+            svg(viewbox="0 0 1000 150").triangle--svg-left-triagle
+                polygon(points=("0 0, 1000 150, 0 150"))
+        .works__col
+            svg(viewbox="0 0 1000 150").triangle--svg-right-triagle
+                polygon(points=("0 150, 1000 0, 1000 150"))
+    .works__title
+        h1.title Мои работы
+    .works__slider
+        .slider
+            .slider__col.slider__col--left 
+                .slider-details
+                    .slider-details__title
+                        h2.title Сайт школы онлайн образования
+                    .slider-details__description
+                        p html, css, javascript
+                    .slider-details__action
+                        .button.button--before-icon-link Посмотреть сайт
+            .slider__col.slider__col--rigth 
+                .slider-preview
+                    .slider-preview__img
+                    .slider-preview__nav
+                        .slider-preview__down
+                            .slider-preview__bt.slider-preview__bt--down
+                                .inlined-svg-arrow-down
+                        .slider-preview__up
+                            .slider-preview__bt.slider-preview__bt--up
+                                .inlined-svg-arrow-up
+  sections.recommendations
+    .recommendations__title
+        h1.title Что обо мне говорят
+    .recommendations__row
+        .recommendations__col 
+            i.icon.fa-quote-left
+            .desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+            .user.user--flex-direction-row
+                .user__pic-container
+                    .user_pic
+                        +image('content/user1.jpg', 'user pic', 'user_pic-img')
+                .user__info 
+                    .user__name Ковальчук Дмитрий
+                    .user__desc основатель Loftschool
+        .recommendations__col 
+            i.icon.fa-quote-left
+            .desc Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+            .user.user--flex-direction-row
+                .user__pic-container
+                    .user_pic
+                        +image('content/user2.jpg', 'user pic', 'user_pic-img')
+                .user__info 
+                    .user__name Сабанцев Владимир
+                    .user__desc преподаватель
+    .recommendations__feedback
+        form.feedback
+            .feedback__title
+                h2.title Связаться со мной
+            .feedback__name
+                input(name="name", placeholder="Имя").name
+            .feedback__email
+                input(name="email", placeholder="Email").email
+            .feedback__message
+                textarea(name="message", cols="30", rows="10", placeholder="Ваше сообщение").message
+            .feedback__actions  
+                .button.button--left Отправить
+                .button.button--right Очистить
+                
+

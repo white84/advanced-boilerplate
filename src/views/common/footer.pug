@@ -1,2 +1,36 @@
 footer.footer
-  h2 Copyright &copy;
+    .footer__row
+      .footer__col
+        ul.menu
+          -
+            var menuItems = [
+              {
+                href:'portfolio.html',
+                name:'Мои работы'
+              },
+              {
+                href:'about.html',
+                name:'Обо мне'
+              },
+              {
+                href:'blog.html',
+                name:'Блог'
+              },
+              {
+                href:'index.html',
+                name:'Авторизация'
+              },
+            ];
+          each menuItem in menuItems
+            il.menu__item
+              a.menu_link(href=menuItem.href) #{menuItem.name}
+      .footer__col.footer__col--justify-end
+        ul.socials
+        each social in [['vk', 'https://vk.com/id436024674'], ['github', 'https://github.com/white84'], ['in', 'https://ru.linkedin.com/']]
+            li.socials__item.socials__item--round
+              a(href=`${social[1]}` target="_blank").social__link
+                //+icon(social, 'socials__icon')
+                .socials__icon(class=`inlined-svg-${social[0]}`)
+    .footer__row
+      .footer__col  Я веб-разработчик из Подольска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+      .footer__col.footer__col--justify-end © Лашин Александр | создано с любовью в LoftSchool | 2019

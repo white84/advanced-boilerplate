@@ -8,3 +8,11 @@
   font-style: normal;
   font-display: block;
 }
+
+@font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style : normal;
+  src: url('/assets/fonts/fontawesome-webfont.woff') format('woff'), 
+  url('/assets/fonts/fontawesome-webfont.woff2') format('woff2');        
+}

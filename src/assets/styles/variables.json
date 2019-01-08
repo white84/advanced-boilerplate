@@ -4,7 +4,13 @@
   "green": "#16c2aa",
   "text-color": "#455a64",
   "text-color-accent" : "#00bfa5",
+  "text-color-white": "#ffffff",
   "grey": "#373e42",
   "light-grey": "#dfdcd5",
-  "test" : "#000"
+  "test" : "#000",
+  "green-botton" : "#00bfa5",
+  "green-botton-color" : "#ffffff",
+  "green-botton-hover" : "#009688",
+  "white-botton-hover" : "#ffffff",
+  "white-botton-hover-color" : "#00bfa5"
 }

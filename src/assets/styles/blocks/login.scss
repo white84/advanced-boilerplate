@@ -1,0 +1,63 @@
+.login{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    background: url('assets/images/bg/bg-photo-1800x789.jpg') center center / cover no-repeat;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+    .login__header
+    {
+        position: absolute;
+        text-align: right;
+        top: 25px;
+        right: 100px;
+    }
+    .login__content
+    {
+        width: 380px;
+        margin: 100px;
+        background-color: $white;
+        opacity: 0.8;
+        border-radius: 5px;
+        .login__user-info
+        {
+            margin: 40px;
+        }
+        .login__socials
+        {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .login__buttons
+        {
+            .button--portfolio
+            {
+                min-width: 134px;
+                width: 100%;
+            }
+            .button--about
+            {
+                min-width: 105px;
+                width: 100%;
+            }
+    
+            .button--blog
+            {
+                min-width: 76px;
+                width: 100%;
+            }
+        }
+    }
+
+    .login__footer
+    {
+        position: absolute;
+        color: $white;
+        text-align: center;
+        bottom: 40px;
+    }
+}

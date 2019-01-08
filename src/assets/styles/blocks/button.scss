@@ -1,0 +1,48 @@
+.button
+{
+    border-radius: 5px;
+    background-color: $green-botton;
+    font-size: 16px;
+    color: $green-botton-color;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover
+    {
+        background-color: $green-botton-hover;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.button--before-icon-link::before
+{
+    display: inline-block;
+        content: ' ';
+        background-image: svg-load('link.svg', fill=#FFFFFF, fill-opacity=1);
+        background-size: 18px 18px;
+        background-repeat: no-repeat;
+        height: 18px;
+        width: 18px;
+        padding-right: 10px; 
+        margin-bottom: -4px;
+}
+
+.button.button--white
+{
+    background-color: transparent;
+    border: $white-botton-hover solid 1px;
+
+    &:hover
+    {
+        background-color: $white-botton-hover;
+        color: $white-botton-hover-color;
+    }
+}

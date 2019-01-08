@@ -1,0 +1,98 @@
+.blog
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .blog__triangle
+    {
+        display: flex;    
+        width: 100%;   
+        height: 0;
+        margin-bottom: 70px;
+
+        .blog__triangle-col{    
+        position: relative;
+        width: 50%;
+        height: 0px;
+
+        .triangle
+        {
+            &--svg-left-triagle
+            {
+                fill: #ffffff;
+                position:absolute; top: -150px; right:0; height: 150px;
+            }
+            &--svg-right-triagle
+            {
+                fill: #ffffff;
+                position:absolute; top: -150px; left:0; height: 150px;
+            }
+        }
+    }
+    }
+
+    .blog__content
+    {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        .blog__col
+        {
+            margin-bottom: 140px;
+            &--left
+            {
+                min-width: 490px;
+            }
+            &--right
+            {
+                width: 100%;
+                padding-right: 310px;
+            }
+        }
+        .blog-menu
+        {
+            margin-left: 100px;
+            margin-right: 100px;
+            text-align: right;
+
+            .blog-menu__item{
+                padding: 20px;
+
+                a{
+                    text-decoration: none;
+                    color: $text-color;
+                }
+
+                &--active
+                {
+                    color: $text-color-accent;
+                    border-right: $text-color-accent solid 2px;
+                    font-weight: bold;
+
+                    a{
+                        color: inherit;
+                    }
+                }
+            }
+        }
+        .blog-art
+        {
+            .blog-art__title
+            {
+                margin-bottom: 30px;    
+            }
+            .blog-art__date
+            {
+                color: $text-color-accent;
+                margin-bottom: 30px; 
+            }
+            .blog-art__html 
+            {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

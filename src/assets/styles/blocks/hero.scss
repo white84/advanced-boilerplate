@@ -7,11 +7,15 @@
     flex-direction: column;
     justify-content: center;
 
+   
+
     .hero__content
     {
         position: absolute;
-        height: 100vh;
+        height: inherit;
         width: 100%;
+
+  
 
         .title-img
         {
@@ -52,6 +56,8 @@
     }
 }
 
+
+
 .user{
     display: flex;
     flex-direction: column;
@@ -77,6 +83,18 @@
             .user__name
             {
                 font-size: 35px;
+                .user__name-icon
+                {
+                    fill: $white;
+                    opacity: 0.1;
+                    position: absolute;
+                    margin-top: -20px;
+                    left: 50%;
+                    transform: translate(-50%);
+                }
+                .title{
+                    color: $white;
+                }
             }
             .user__desc
             {

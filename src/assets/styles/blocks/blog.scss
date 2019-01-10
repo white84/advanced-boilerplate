@@ -3,9 +3,11 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding: 70px;
 
     .blog__triangle
     {
+        margin-top: -70px;
         display: flex;    
         width: 100%;   
         height: 0;
@@ -45,17 +47,17 @@
             &--left
             {
                 min-width: 490px;
+                padding-left: 30px;
+                padding-right: 100px;
             }
             &--right
             {
                 width: 100%;
-                padding-right: 310px;
+                padding-right: 200px;
             }
         }
         .blog-menu
         {
-            margin-left: 100px;
-            margin-right: 100px;
             text-align: right;
 
             .blog-menu__item{
@@ -89,10 +91,7 @@
                 color: $text-color-accent;
                 margin-bottom: 30px; 
             }
-            .blog-art__html 
-            {
-                margin-bottom: 30px;
-            }
+            margin-bottom: 30px;
         }
     }
 }

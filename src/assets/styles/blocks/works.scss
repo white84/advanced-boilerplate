@@ -61,8 +61,7 @@
 
                 .slider-details__title
                 {
-                    display: inline;
-                    width: 290px;
+
                 }
                 
                 .slider-details__description
@@ -212,6 +211,8 @@
             .icon{
                 font-family: "FontAwesome";
                 font-size: 24px;
+                display: block;
+                margin-bottom: 30px;
             }
             .fa-quote-left:before {
                 content: "\f10d"; 
@@ -220,7 +221,6 @@
 
             .desc
             {
-                margin-top: 30px;
                 margin-bottom: 30px;
             }
         }
@@ -229,15 +229,12 @@
     {
         display: flex;
         justify-content: center;
-        height: 600px;
+        margin-bottom: 70px;
     }
     .feedback
     {
-        position: absolute;
         width: 400px;
-        height: 455;
         border-radius: 5px;
-        margin-bottom: 70px;
         overflow: hidden;
         background: inherit;
         background-attachment: fixed;
@@ -272,7 +269,7 @@
         
         .feedback__title
         {
-            margin: 38px 20px 38px 20px;
+            padding: 38px 20px 38px 20px;
         }
         input{
             border-radius: 5px;
@@ -306,7 +303,7 @@
         }
         .feedback__name, .feedback__email, .feedback__message
         {
-            margin: 0 20px 20px 20px;
+            padding: 0 20px 20px 20px;
         }
 
         .feedback__actions

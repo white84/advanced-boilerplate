@@ -156,7 +156,7 @@
     margin-bottom: 60px;
 }
 
-.skills__item
+.skills__item 
 {
     margin-bottom: 40px;
 }
@@ -169,12 +169,21 @@
     color: rgb(69, 90, 100);
 }
 
-.skill-row__item
+.skills-row__list
 {
-    display: inline-block;
-    margin-right: 40px;
-    position: relative;
+    .skill-row__item
+    {
+        display: inline-block;
+        margin-right: 40px;
+        position: relative;
+    }
+
+    .skill-row__item:last-child
+    {
+        margin-right:0;
+    }
 }
+
 
 .skill__progress-bar
 {

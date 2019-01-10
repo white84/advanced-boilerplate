@@ -73,6 +73,10 @@
         background: svg-load('map_marker.svg', fill=$green, fill-opacity="1") center center no-repeat;
     }
 }
+.contact:last-child
+{
+    margin-bottom: 0;
+}
 
 .footer
 {

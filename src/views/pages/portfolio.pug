@@ -75,14 +75,15 @@ block content
                     .user__desc преподаватель
     .recommendations__feedback
         form.feedback
-            .feedback__title
-                h2.title Связаться со мной
-            .feedback__name
-                input(name="name", placeholder="Имя").name
-            .feedback__email
-                input(name="email", placeholder="Email").email
-            .feedback__message
-                textarea(name="message", cols="30", rows="10", placeholder="Ваше сообщение").message
+            .feedback-controls
+                .feedback__title
+                    h2.title Связаться со мной
+                .feedback__name
+                    input(name="name", placeholder="Имя").name
+                .feedback__email
+                    input(name="email", placeholder="Email").email
+                .feedback__message
+                    textarea(name="message", cols="30", rows="10", placeholder="Ваше сообщение").message
             .feedback__actions  
                 .button.button--left Отправить
                 .button.button--right Очистить

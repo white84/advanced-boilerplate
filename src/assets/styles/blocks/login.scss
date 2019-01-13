@@ -6,21 +6,23 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    padding: 25px 100px 40px 100px;
     
 
     .login__header
     {
         display: flex;
-        padding: 25px 100px;
         right: 100px;
         width: 100%;
         justify-content: flex-end;
+        margin-bottom: 25px;
     }
     .login__content
     {
         width: 380px;
         background-color: rgba(239, 238, 233, .8);
         border-radius: 5px;
+        margin-bottom: 40px;
         .login__user-info
         {
             padding: 40px;
@@ -56,7 +58,6 @@
     {
         color: $white;
         display: flex;
-        padding: 40px;
         width: 100%;
         justify-content: center;
     }

@@ -60,5 +60,60 @@
         display: flex;
         width: 100%;
         justify-content: center;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+    .login{
+        padding: 25px 25px 30px 25px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .login{
+        padding: 25px 25px 30px 25px;
+        .login__content
+        {
+            width: 348px;
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    body {
+        font-size: 14px;
+    }
+    .login{
+        padding: 5px 10px 40px 10px;
+        .login__header
+        {
+            justify-content: center;
+        }
+        .login__content
+        {
+            width: 300px;
+            .login__buttons
+            {
+                .button--portfolio
+                {
+                    min-width: 130px;
+                    width: 100%;
+                }
+                .button--about
+                {
+                    min-width: 100px;
+                    width: 100%;
+                }
+        
+                .button--blog
+                {
+                    min-width: 70px;
+                    width: 100%;
+                }
+            }
+        }
+        
     }
 }

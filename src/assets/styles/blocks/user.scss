@@ -85,3 +85,36 @@
         }
     }
 }
+
+
+@media screen and (max-width:768px) {
+    .user{
+        .user__info
+        {
+            .user__name
+            {
+                font-size: 28px;
+            }
+            .user__desc
+            {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    .user{
+        .user__info
+        {
+            .user__name
+            {
+                font-size: 21px;
+            }
+            .user__desc
+            {
+                font-size: 14px;
+            }
+        }
+    }
+}

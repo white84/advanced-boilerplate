@@ -20,11 +20,10 @@ block content
         .hero__arrow-down.inlined-svg-arrow-down 
   section.works
     a(name="works")
-    .works__triangle
-        .works__col
+
             svg(viewbox="0 0 1000 150").triangle--svg-left-triagle
                 polygon(points=("0 0, 1000 150, 0 150"))
-        .works__col
+        
             svg(viewbox="0 0 1000 150").triangle--svg-right-triagle
                 polygon(points=("0 150, 1000 0, 1000 150"))
     .works__title
@@ -52,40 +51,45 @@ block content
   sections.recommendations
     .recommendations__title
         h1.title Что обо мне говорят
-    .recommendations__row
-        .recommendations__col 
-            i.icon.fa-quote-left
-            .desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-            .user.user--flex-direction-row
-                .user__pic-container
-                    .user_pic
-                        +image('content/user1.jpg', 'user pic', 'user_pic-img')
-                .user__info 
-                    .user__name Ковальчук Дмитрий
-                    .user__desc основатель Loftschool
-        .recommendations__col 
-            i.icon.fa-quote-left
-            .desc Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-            .user.user--flex-direction-row
-                .user__pic-container
-                    .user_pic
-                        +image('content/user2.jpg', 'user pic', 'user_pic-img')
-                .user__info 
-                    .user__name Сабанцев Владимир
-                    .user__desc преподаватель
-    .recommendations__feedback
-        form.feedback
-            .feedback-controls
-                .feedback__title
-                    h2.title Связаться со мной
-                .feedback__name
-                    input(name="name", placeholder="Имя").name
-                .feedback__email
-                    input(name="email", placeholder="Email").email
-                .feedback__message
-                    textarea(name="message", cols="30", rows="10", placeholder="Ваше сообщение").message
-            .feedback__actions  
-                .button.button--left Отправить
-                .button.button--right Очистить
+    .recommendation__content
+        .recommendations__row
+            .recommendations__col 
+                i.icon.fa-quote-left
+                .desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .user.user--flex-direction-row
+                    .user__pic-container
+                        .user_pic
+                            +image('content/user1.jpg', 'user pic', 'user_pic-img')
+                    .user__info 
+                        .user__name Ковальчук Дмитрий
+                        .user__desc основатель Loftschool
+            .recommendations__col 
+                i.icon.fa-quote-left
+                .desc Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .user.user--flex-direction-row
+                    .user__pic-container
+                        .user_pic
+                            +image('content/user2.jpg', 'user pic', 'user_pic-img')
+                    .user__info 
+                        .user__name Сабанцев Владимир
+                        .user__desc преподаватель
+        .recommendations__feedback
+            .recommendations__feedback-form
+                form.feedback
+                    .feedback-controls
+                        .feedback__title
+                            h2.title Связаться со мной
+                        .feedback__name
+                            input(name="name", placeholder="Имя").name
+                        .feedback__email
+                            input(name="email", placeholder="Email").email
+                        .feedback__message
+                            textarea(name="message", cols="30", rows="10", placeholder="Ваше сообщение").message
+                    .feedback__actions  
+                        .button.button--left Отправить
+                        .button.button--right Очистить
+            .recommendations__feedback-nav
+                .inlined-svg-arrow-up
+        include ../common/footer.pug
                 
 

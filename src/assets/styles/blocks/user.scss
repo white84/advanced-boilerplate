@@ -100,6 +100,20 @@
                 font-size: 14px;
             }
         }
+        &--flex-direction-row
+        {
+            .user__info
+            {
+                .user__name
+                {
+                    font-size: 14px;
+                }
+                .user__desc
+                {
+                    font-size: 14px;
+                }
+            }
+        }
     }
 }
 
@@ -114,6 +128,20 @@
             .user__desc
             {
                 font-size: 14px;
+            }
+        }
+        &--flex-direction-row
+        {
+            .user__info
+            {
+                .user__name
+                {
+                    font-size: 14px;
+                }
+                .user__desc
+                {
+                    font-size: 14px;
+                }
             }
         }
     }

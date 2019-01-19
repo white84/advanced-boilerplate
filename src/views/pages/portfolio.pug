@@ -30,7 +30,7 @@ block content
         h1.title Мои работы
     .works__slider
         .slider
-            .slider__col.slider__col--left 
+            .slider__details
                 .slider-details
                     .slider-details__title
                         h2.title Сайт школы онлайн образования
@@ -38,16 +38,15 @@ block content
                         p html, css, javascript
                     .slider-details__action
                         .button.button--before-icon-link Посмотреть сайт
-            .slider__col.slider__col--rigth 
-                .slider-preview
-                    .slider-preview__img
-                    .slider-preview__nav
-                        .slider-preview__down
-                            .slider-preview__bt.slider-preview__bt--down
-                                .inlined-svg-arrow-down
-                        .slider-preview__up
-                            .slider-preview__bt.slider-preview__bt--up
-                                .inlined-svg-arrow-up
+            .slider__preview 
+                    img(src="assets/images/bg/slider-preview-img.png", alt="картинка").slider-preview
+            .slider__nav
+                    .slider-nav__down
+                        img(src="assets/images/bg/slider-down.png", alt="картинка").slider-preview
+                        .inlined-svg-arrow-down 
+                    .slider-nav__up
+                        .inlined-svg-arrow-up 
+                        img(src="assets/images/bg/slider-up.png", alt="картинка").slider-preview
   sections.recommendations
     .recommendations__title
         h1.title Что обо мне говорят

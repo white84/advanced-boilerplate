@@ -1,0 +1,21 @@
+script(type="text/x-template")#skills-list
+    ul.skills
+        li.skills__item(v-for="skillsGroupObject in skills")
+            skills-row(:skillsGroupObject="skillsGroupObject")
+
+
+script(type="text/x-template")#skills-item
+    .skills-row
+        .skills-row__title {{skillsGroupObject.skillsGroup}}
+        ul.skills-row__list
+            li.skill-row__item(v-for="(skillPersentage, skillTitle) in skillsGroupObject.skills")
+                skill(
+                    :skillPersentage="skillPersentage"
+                    :skillTitle="skillTitle")
+
+script(type="text/x-template")#skill
+    .skill
+        .skill__progress-bar(v-bind:title="skillTitle")
+            svg(viewPort="0 0 100 100" preserveAspectRatio="none").skill__progress
+                circle(r="50" cx="60" cy="60").skill__circle
+                circle(r="50" cx="60" cy="60" ref="circle"   stroke-dashoffset="100"  ).skill__circle.skill__circle--bar

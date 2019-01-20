@@ -259,19 +259,19 @@
 {
     width:120px;
     height:120px;
-    stroke: $green;
+    transform: rotate(-90deg);
 }
 
 .skill__circle
 {
-    stroke-dashoffset: 0;
-    transition: stroke-dashoffset 1s linear;
     stroke: $light-grey;
-    stroke-width: 1em;
+    stroke-width: 16px;
     fill: transparent;
+    stroke-dasharray: 314;
     &--bar
     {
         stroke: $green;
+        stroke-dashoffset: 314;
     }
 }
 

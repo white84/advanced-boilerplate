@@ -6,7 +6,8 @@ module.exports = {
     about: "./src/assets/scripts/about.js",
     auth: "./src/assets/scripts/auth.js",
     works: "./src/assets/scripts/works.js",
-    blog: "./src/assets/scripts/blog.js"
+    blog: "./src/assets/scripts/blog.js",
+    hamburger_menu: "./src/assets/scripts/hamburger_menu.js"
   },
   output: {
     filename: "[name].bundle.js"

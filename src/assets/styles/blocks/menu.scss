@@ -1,0 +1,47 @@
+.main-menu{
+    z-index: 1000;
+    .main-menu__left
+    {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        background-color: $green;
+        opacity: .9;
+        transition-timing-function: linear;
+        transition-duration: 1s;
+    }
+
+    .main-menu__right
+    {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        background-color: $green;
+        opacity: .9;
+        transition-timing-function: linear;
+        transition-duration: 1s;
+    }
+
+    .is-active
+    {
+        transition-timing-function: linear;
+        transition-duration: 1s;
+        width: 50%;
+    }
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.overflow-nidden{
+    overflow:hidden;
+}

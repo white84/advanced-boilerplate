@@ -22,7 +22,6 @@ document.getElementById('hamburger-menu').addEventListener('click', function() {
     }
     else
     {
-        window.scroll(0, 0);
         hamburgerMenu.classList.add('is-active');
         body.classList.add('overflow-nidden');
         for(i = 0; i < menuItems.length; i++)
@@ -32,6 +31,13 @@ document.getElementById('hamburger-menu').addEventListener('click', function() {
         menu.classList.remove('main-menu--hide');
         window.setTimeout(() => {
             menu.classList.add('is-active');
+            window.scroll(0, 0);
         }, 100);
     }
  })
+
+ var parallax = document.getElementsByClassName('parallax')[0];
+ window.onscroll = function() {
+    var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+     parallax.scrollTop = scrolled;
+ };

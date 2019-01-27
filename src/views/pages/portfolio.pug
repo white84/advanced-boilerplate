@@ -7,6 +7,12 @@ block content
   section.hero
     include ../common/header.pug
     .hero__content
+      .parallax
+        -var n = 1; 
+          while n < 11
+            .parallax__layer
+              img(src="assets/images/bg/parallax/layer-" + n++ + ".png").parallax__image
+          .parallax__content
       +image('titles/portfolio-header.png', 'page title', 'title-img')
       .hero__user-desc
         .user

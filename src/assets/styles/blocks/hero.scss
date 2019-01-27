@@ -1,12 +1,13 @@
 .hero
 {
     height: 100vh;
-    background: url('assets/images/bg/bg-photo-1800x789.jpg') center center / cover no-repeat;
+    //background: url('assets/images/bg/bg-photo-1800x789.jpg') center center / cover no-repeat;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
+    
    
 
     .hero__content
@@ -14,6 +15,8 @@
         position: absolute;
         height: inherit;
         width: 100%;
+
+
 
   
 
@@ -56,5 +59,58 @@
     }
 }
 
+.parallax
+{
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    //overflow-x: hidden;
+    //overflow-y: hidden;
+    overflow: hidden;
+    perspective: 100px;
 
+    .parallax__layer
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        .parallax__image
+        {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120%;
+        }
+    }
+
+    $layers : 10;
+
+    @for $layerNum from $layers through 1
+    {
+        .parallax__layer:nth-child(#{$layerNum}){
+            
+            $currentLayer : calc($layers - $layerNum);
+            $perspective : calc(- $currentLayer * 50)px;
+            $scale: calc($currentLayer * .5 + 1);
+            transform: translateZ($perspective) scale($scale);
+        } 
+    }
+
+
+    .parallax__content
+    {
+        position: absolute;
+        height: 1000px;
+        top: 100%;
+        left: 0;
+        right: 0;
+        //background-color: black;
+    }
+}
 

@@ -1,3 +1,29 @@
 .main-menu
     .main-menu__left
     .main-menu__right
+    .main-menu__content
+        -
+            var menuItems = [
+              {
+                href:'portfolio.html',
+                name:'Мои работы'
+              },
+              {
+                href:'about.html',
+                name:'Обо мне'
+              },
+              {
+                href:'blog.html',
+                name:'Блог'
+              },
+              {
+                href:'index.html',
+                name:'Авторизация'
+              },
+            ];
+        ul.menu-list
+            each menuItem, index in menuItems
+                li.menu-list__item
+                    a(href=menuItem.href)
+                        h1.main-menu-item #{menuItem.name}
+                

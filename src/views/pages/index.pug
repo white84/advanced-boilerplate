@@ -1,10 +1,17 @@
 extends ../auth.layout.pug
 
+
+
 block content
   //.hello-world
     +icon('github', 'hello-world__block')
     .inlined-svg
   section.login
+      .parallax
+        -var n = 1; 
+          while n < 11
+            .parallax__layer
+              img(src="assets/images/bg/parallax/layer-" + n++ + ".png").parallax__image
       .login__header
         .button.button--white Авторизоваться
       .login__content
@@ -33,6 +40,9 @@ block content
               a(href="blog.html") Блог
       .login__footer © Лашин Александр | создано с любовью в LoftSchool | 2019
 
+
+
+  script(src='auth.bundle.js')
         
 
 

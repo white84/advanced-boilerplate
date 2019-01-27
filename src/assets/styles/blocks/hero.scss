@@ -102,6 +102,15 @@
         } 
     }
 
+    .parallax__layer:first-child
+    {
+        .parallax__image
+        {
+            top: 0;
+            height: 100%;
+        }
+    }
+
 
     .parallax__content
     {
